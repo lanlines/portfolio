@@ -51,7 +51,7 @@ e.g. "I'm a software developer based in [City]. I specialize in building modern 
 
 **Heading:** Projects
 
-> How many to include: TBD — aim for 3–5 strong ones.
+> 2 projects for now. See `docs/projects.md` for full entries.
 > Each card includes: title, short description, tech stack tags, screenshot, and links.
 
 ### Project 1
@@ -67,15 +67,6 @@ e.g. "I'm a software developer based in [City]. I specialize in building modern 
 - **Tech:** [placeholder]
 - **Screenshot:** `[placeholder image]`
 - **Links:** [Live Demo](#) · [GitHub](#)
-
-### Project 3
-- **Title:** [Project Name]
-- **Description:** [placeholder]
-- **Tech:** [placeholder]
-- **Screenshot:** `[placeholder image]`
-- **Links:** [Live Demo](#) · [GitHub](#)
-
-> Add more as needed. Screenshots can be placed in `public/images/projects/`.
 
 ---
 
@@ -106,11 +97,11 @@ e.g. "I'm a software developer based in [City]. I specialize in building modern 
 
 **Heading:** Get In Touch
 
-**Subtext:** [e.g. "I'm open to new opportunities. Feel free to reach out."]
+**Subtext:** [placeholder — e.g. "I’m open to new opportunities. Feel free to reach out."]
 
-**Links:**
+**Links (placeholder):**
 - Email: [your@email.com]
 - GitHub: [github.com/yourusername]
 - LinkedIn: [linkedin.com/in/yourusername]
 
-**Optional:** Contact form (name, email, message) — TBD
+> Contact section is a placeholder for now — just links, no form.

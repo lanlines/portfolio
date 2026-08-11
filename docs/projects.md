@@ -6,8 +6,7 @@ These map directly to the data in `src/content/projects.ts`.
 ---
 
 ## How many to include?
-Aim for **3–5**. Quality over quantity — each one should show something different
-(e.g. one full-stack, one UI-heavy, one tool/utility).
+**2 projects** for now. Can expand later by adding entries to `src/content/projects.ts`.
 
 ## Screenshot guidelines
 - Place images in `public/images/projects/`
@@ -53,18 +52,10 @@ Aim for **3–5**. Quality over quantity — each one should show something diff
 - **GitHub:** [placeholder]
 - **Featured:** yes
 
-### Project 3
-- **Title:** [placeholder]
-- **Description:** [placeholder]
-- **Tech:** [placeholder]
-- **Screenshot:** `public/images/projects/project-3.png` — [placeholder]
-- **Live URL:** [placeholder or N/A]
-- **GitHub:** [placeholder]
-- **Featured:** yes
-
 ---
 
 ## Notes
-- 3 projects is a solid starting point — can always add more later
+- Start with 2, add more later by appending to `src/content/projects.ts` — no component changes needed
 - If a project has no live URL (e.g. private/internal), just show GitHub
 - Screenshots can be replaced with a styled placeholder card until ready
+- Recommended screenshot size: `1200×750px` (16:10), `.png` or `.webp`
