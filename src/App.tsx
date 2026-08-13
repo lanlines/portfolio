@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './styles/global.css';
+import Navbar from './components/Navbar/Navbar';
 
 type Theme = 'light' | 'dark';
 
@@ -21,11 +22,8 @@ export default function App() {
 
   return (
     <div>
-      {/* Components will be added here */}
-      <p style={{ padding: '2rem', color: 'var(--fg)' }}>
-        Foundation ready — theme: {theme}
-        <button onClick={toggleTheme} style={{ marginLeft: '1rem' }}>toggle</button>
-      </p>
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      {/* Sections will be added here */}
     </div>
   );
 }
