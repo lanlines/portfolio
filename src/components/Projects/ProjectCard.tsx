@@ -4,9 +4,10 @@ import styles from './ProjectCard.module.css';
 interface ProjectCardProps {
   project: Project;
   reverse?: boolean;
+  onViewDetails: (project: Project) => void;
 }
 
-export default function ProjectCard({ project, reverse = false }: ProjectCardProps) {
+export default function ProjectCard({ project, reverse = false, onViewDetails }: ProjectCardProps) {
   return (
     <article className={`${styles.card} ${reverse ? styles.reverse : ''}`}>
       <div className={styles.image}>
@@ -26,6 +27,12 @@ export default function ProjectCard({ project, reverse = false }: ProjectCardPro
           ))}
         </ul>
         <div className={styles.links}>
+          <button
+            className={styles.viewDetails}
+            onClick={() => onViewDetails(project)}
+          >
+            View Details
+          </button>
           {project.liveUrl && (
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.linkPrimary}>
               Live Demo ↗

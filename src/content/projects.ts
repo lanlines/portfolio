@@ -8,6 +8,12 @@ const projects: Project[] = [
     image: '/images/projects/project-1.png',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com/yourusername/project-one',
+    overview: 'A longer description of the project — what problem it solves, who it is for, and what makes it interesting.',
+    highlights: [
+      'Feature or technical decision one',
+      'Feature or technical decision two',
+      'Feature or technical decision three',
+    ],
   },
   {
     title: 'Project Two',
@@ -16,6 +22,12 @@ const projects: Project[] = [
     image: '/images/projects/project-2.png',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com/yourusername/project-two',
+    overview: 'A longer description of the project — what problem it solves, who it is for, and what makes it interesting.',
+    highlights: [
+      'Feature or technical decision one',
+      'Feature or technical decision two',
+      'Feature or technical decision three',
+    ],
   },
 ];
 

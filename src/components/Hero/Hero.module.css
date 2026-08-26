@@ -1,32 +1,32 @@
 .hero {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
-  background-color: var(--bg);
 }
 
 .greeting {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--muted);
   font-weight: var(--weight-normal);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.04em;
 }
 
 .name {
-  font-size: clamp(var(--text-4xl), 8vw, var(--text-5xl));
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
   font-weight: var(--weight-bold);
   line-height: var(--leading-tight);
   color: var(--fg);
   margin-bottom: var(--space-6);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .tagline {
-  font-size: var(--text-lg);
+  font-size: clamp(var(--text-base), 2vw, var(--text-lg));
   color: var(--muted);
-  max-width: 520px;
+  max-width: 540px;
   line-height: var(--leading-normal);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10, 2.5rem);
 }
 
 .cta {
@@ -38,12 +38,17 @@
 .btnPrimary,
 .btnSecondary {
   display: inline-block;
-  padding: var(--space-3) var(--space-6);
+  padding: var(--space-3) var(--space-8);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   border-radius: var(--radius);
-  transition: opacity var(--transition);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.btnPrimary:hover,
+.btnSecondary:hover {
+  transform: translateY(-1px);
 }
 
 .btnPrimary {
@@ -52,12 +57,14 @@
 }
 
 .btnPrimary:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .btnSecondary {
   border: 1px solid var(--border);
   color: var(--fg);
+  background: var(--surface);
+  backdrop-filter: blur(8px);
 }
 
 .btnSecondary:hover {
@@ -66,8 +73,15 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: calc(100vh - 60px);
     align-items: flex-start;
     padding-top: var(--space-16);
+    min-height: auto;
+    padding-bottom: var(--space-16);
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
   }
 }
