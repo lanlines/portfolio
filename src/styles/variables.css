@@ -1,6 +1,6 @@
 /* Light mode (default) */
 :root {
-  --bg-gradient: linear-gradient(160deg, #ffffff 0%, #d4d4d4 100%);
+  --bg-gradient: linear-gradient(160deg, #c0c0c0 0%, #f4f4f4 100%);
   --bg: #ffffff;
   --bg-alt: #f0f0f0;
   --surface: rgba(255, 255, 255, 0.75);
