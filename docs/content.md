@@ -37,13 +37,13 @@ e.g. "I'm a software developer based in [City]. I specialize in building modern 
 
 **Heading:** Skills & Tools
 
-**Categories (placeholder — edit as needed):**
-
-- Languages: JavaScript, TypeScript, [add more]
-- Frontend: React, HTML, CSS, [add more]
-- Backend: [Node.js, etc.]
-- Tools: Git, Vite, VS Code, [add more]
-- Other: [Figma, etc.]
+- Languages: Java, C#, JavaScript, Python
+- Frontend: React.js, React Native, HTML, CSS, Tailwind CSS
+- Backend: Node.js, Express.js, Django, Django REST Framework, ASP.NET, RESTful API
+- Databases: PostgreSQL, MySQL, MS SQL Server, SQLite, Supabase
+- Software Engineering: Agile/Scrum, OOP, Data Structures & Algorithms, System Design, Software Testing, Technical Documentation
+- Tools & Platforms: Git, GitHub, GitHub Actions, CI/CD, Android Studio, Expo
+- AI & Automation: Generative AI, Prompt Engineering, AI-Assisted Development
 
 ---
 
@@ -76,20 +76,16 @@ e.g. "I'm a software developer based in [City]. I specialize in building modern 
 
 ### Experience
 
-#### [Job Title] — [Company Name]
-*[Month Year] – [Month Year or Present]*
-- [Key responsibility or achievement]
-- [placeholder]
-
-#### [Job Title] — [Company Name]
-*[Month Year] – [Month Year]*
-- [placeholder]
+#### Web Development Intern / Software Developer Intern — Dinnox IT Solutions
+*February 2026 – June 2026*
+- Developed and enhanced frontend and backend features, improving application functionality and workflow efficiency.
+- Built responsive and user-friendly interfaces using React, focusing on clean UI and improved user experience.
+- Troubleshot issues and delivered high-quality solutions following modern web development best practices.
 
 ### Education
 
-#### [Degree] — [School Name]
+#### [Degree Name] — [University / College Name]
 *[Year] – [Year]*
-- [placeholder]
 
 ---
 
