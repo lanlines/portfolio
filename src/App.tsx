@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './styles/global.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
 
 type Theme = 'light' | 'dark';
 
@@ -26,6 +28,8 @@ export default function App() {
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <About />
+        <Skills />
         {/* More sections will be added here */}
       </main>
     </div>
