@@ -14,13 +14,13 @@ export default function About() {
             <p className={styles.label}>About Me</p>
             <h2 className={styles.heading}>A little about myself</h2>
             <p className={styles.bio}>
-              I'm a software developer based in [City]. I specialize in building
-              modern web applications with a focus on clean UI and great user
-              experience.
+              I'm Lance Joseph Lines, a Full Stack Developer based in Cebu, Philippines.
+              I specialize in building modern web and mobile applications with a focus
+              on clean UI, solid architecture, and great user experience.
             </p>
             <p className={styles.bio}>
-              When I'm not coding, I'm [hobby/interest]. I'm currently open to
-              new opportunities — feel free to reach out.
+              I studied at Cebu Technological University - Main Campus. I'm currently
+              open to new opportunities feel free to reach out.
             </p>
           </div>
         </div>

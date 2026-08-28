@@ -24,7 +24,7 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
         <a href="#home" className={styles.logo} onClick={closeMenu}>
-          YN
+          LJL
         </a>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>

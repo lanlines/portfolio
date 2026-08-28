@@ -3,18 +3,18 @@ import styles from './Contact.module.css';
 const links = [
   {
     label: 'Email',
-    href: 'mailto:your@email.com',
-    display: 'your@email.com',
+    href: 'mailto:lancejoseph1122@gmail.com',
+    display: 'lancejoseph1122@gmail.com',
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/yourusername',
-    display: 'github.com/yourusername',
+    href: 'https://github.com/lanlines',
+    display: 'github.com/lanlines',
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/yourusername',
-    display: 'linkedin.com/in/yourusername',
+    href: 'https://www.linkedin.com/in/lance-joseph-lines-1724343a1',
+    display: 'linkedin.com/in/lance-joseph-lines',
   },
 ];
 

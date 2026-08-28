@@ -14,9 +14,9 @@ const experience: TimelineEntry[] = [
   },
   {
     type: 'education',
-    title: 'Bachelor of Science in Information Tecnnology',
+    title: 'Bachelor of Science in Information Technology',
     organization: 'Cebu Technological University - Main Campus',
-    period: '[Year] – [Year]',
+    period: '2022 – 2026',
     bullets: [],
   },
 ];

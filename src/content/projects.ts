@@ -26,16 +26,26 @@ const projects: Project[] = [
   },
   {
     title: 'JSV ERP',
-    description: 'A client-based enterprise resource planning system with purchasing and inventory modules, built to reduce manual processes and improve workflow tracking.',
+    description: 'A client-based ERP system that replaces manual purchasing and inventory workflows with a centralized digital system for store attendants, warehouse managers, and administrators.',
     tech: ['JavaScript', 'Django', 'PostgreSQL', 'Tailwind CSS'],
-    image: '/images/projects/jsv/heroCard/dashboard.png',
-    modalImages: [],
+    heroImages: [
+      '/images/projects/jsv/heroCard/admin_dashboard.png',
+      '/images/projects/jsv/heroCard/admin_login.png',
+    ],
+    modalImages: [
+      '/images/projects/jsv/modal/purchasing.png',
+      '/images/projects/jsv/modal/purchase_orders.png',
+      '/images/projects/jsv/modal/inventory.png',
+      '/images/projects/jsv/modal/inventory_item.png',
+    ],
     githubUrl: 'https://github.com/yourusername/jsv-erp',
-    overview: 'A placeholder overview for JSV ERP.',
+    overview: 'A client-based ERP system developed to streamline purchasing and inventory management by replacing manual workflows with a centralized digital system. The system improves inventory tracking, item requests, purchasing, and coordination between store attendants, warehouse managers, and administrators.',
+    details: 'The system provides role-based workflows for Attendants, Warehouse Managers, and Admins:\n\nInventory Management – Monitor and update store and warehouse stock levels.\n\nItem Requests – Attendants can submit requests for low-stock or needed items, which warehouse managers can process.\n\nPurchasing Workflow – Warehouse managers can request unavailable items from the admin, while admins manage purchasing and vendor-related tasks.\n\nRole-Based Access – Each user role has specific features and permissions based on their responsibilities.\n\nCentralized Monitoring – Admins can oversee store and warehouse inventories, requests, purchases, and users.\n\nImproved Workflow – Replaced phone calls, manual ledgers, and repetitive inventory updates with a structured digital workflow.',
     highlights: [
-      'Developed core purchasing and inventory modules',
-      'Designed and implemented improved workflow reducing manual processes',
-      'Designed and implemented PostgreSQL database structure and ERD',
+      'Developed and implemented core Purchasing and Inventory modules.',
+      'Designed and implemented improved workflows for item requests, inventory management, and purchasing, reducing manual processes.',
+      'Designed and implemented the PostgreSQL database structure and ERD.',
+      'Developed both frontend and backend functionality using JavaScript, Django, PostgreSQL, and Tailwind CSS.',
     ],
   },
 ];
