@@ -70,11 +70,15 @@
 
 .screenshot {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 300px;
+  max-height: 560px;
+  flex-shrink: 0;
   border-radius: var(--radius);
   overflow: hidden;
-  background-color: var(--border);
+  background-color: var(--bg-alt);
   border: 1px solid var(--border);
+  position: relative;
 }
 
 .screenshot img {

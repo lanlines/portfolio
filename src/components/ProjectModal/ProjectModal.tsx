@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Project } from '../../types';
+import Carousel from '../Carousel/Carousel';
 import styles from './ProjectModal.module.css';
 
 interface ProjectModalProps {
@@ -18,6 +19,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     };
   }, [onClose]);
 
+  const modalImages = project.modalImages ?? (project.image ? [project.image] : []);
+
   return (
     <div className={styles.overlay} onClick={onClose} role="dialog" aria-modal="true">
       <div className={styles.modal} onClick={e => e.stopPropagation()}>
@@ -32,13 +35,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           <button className={styles.close} onClick={onClose} aria-label="Close modal">✕</button>
         </div>
 
-        <div className={styles.screenshot}>
-          {project.image ? (
-            <img src={project.image} alt={project.title} />
-          ) : (
-            <div className={styles.screenshotPlaceholder} aria-hidden="true" />
-          )}
-        </div>
+        {modalImages.length > 0 && (
+          <div className={styles.screenshot}>
+            <Carousel images={modalImages} alt={project.title} autoPlayInterval={4000} />
+          </div>
+        )}
 
         {project.overview && (
           <div className={styles.section}>
@@ -47,9 +48,18 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
         )}
 
+        {project.details && (
+          <div className={styles.section}>
+            <h3 className={styles.sectionHeading}>Details</h3>
+            {project.details.split('\n\n').map((para, i) => (
+              <p key={i} className={styles.sectionText}>{para}</p>
+            ))}
+          </div>
+        )}
+
         {project.highlights && project.highlights.length > 0 && (
           <div className={styles.section}>
-            <h3 className={styles.sectionHeading}>What I built</h3>
+            <h3 className={styles.sectionHeading}>My Contributions</h3>
             <ul className={styles.highlights}>
               {project.highlights.map((h, i) => <li key={i}>{h}</li>)}
             </ul>

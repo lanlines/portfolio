@@ -14,8 +14,8 @@ const experience: TimelineEntry[] = [
   },
   {
     type: 'education',
-    title: '[Degree Name]',
-    organization: '[University / College Name]',
+    title: 'Bachelor of Science in Information Tecnnology',
+    organization: 'Cebu Technological University - Main Campus',
     period: '[Year] – [Year]',
     bullets: [],
   },

@@ -1,4 +1,5 @@
 import { Project } from '../../types';
+import Carousel from '../Carousel/Carousel';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -8,14 +9,15 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, reverse = false, onViewDetails }: ProjectCardProps) {
+  const images = project.heroImages ?? (project.image ? [project.image] : []);
+
   return (
     <article className={`${styles.card} ${reverse ? styles.reverse : ''}`}>
       <div className={styles.image}>
-        {project.image ? (
-          <img src={project.image} alt={project.title} />
-        ) : (
-          <div className={styles.imagePlaceholder} aria-hidden="true" />
-        )}
+        {images.length > 0
+          ? <Carousel images={images} alt={project.title} />
+          : <div className={styles.imagePlaceholder} aria-hidden="true" />
+        }
       </div>
 
       <div className={styles.content}>
@@ -27,10 +29,7 @@ export default function ProjectCard({ project, reverse = false, onViewDetails }:
           ))}
         </ul>
         <div className={styles.links}>
-          <button
-            className={styles.viewDetails}
-            onClick={() => onViewDetails(project)}
-          >
+          <button className={styles.viewDetails} onClick={() => onViewDetails(project)}>
             View Details
           </button>
           {project.liveUrl && (

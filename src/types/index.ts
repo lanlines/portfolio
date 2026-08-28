@@ -3,9 +3,12 @@ export interface Project {
   description: string;
   tech: string[];
   image?: string;
+  heroImages?: string[];
+  modalImages?: string[];
   liveUrl?: string;
   githubUrl?: string;
   overview?: string;
+  details?: string;
   highlights?: string[];
 }
 

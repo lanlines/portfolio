@@ -6,7 +6,9 @@ export default function About() {
       <div className="container">
         <div className={styles.inner}>
           <div className={styles.photo}>
-            <div className={styles.photoPlaceholder} aria-hidden="true" />
+            <div className={styles.photoInner}>
+              <img src="/images/about/profile_picture.jpg" alt="Profile Picture" />
+            </div>
           </div>
           <div className={styles.content}>
             <p className={styles.label}>About Me</p>

@@ -1,6 +1,7 @@
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -25,21 +26,13 @@
 }
 
 .image {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background-color: var(--border);
-}
-
-.image img {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 500ms ease;
+  height: 380px;
+  overflow: hidden;
+  background-color: var(--bg-alt);
 }
 
-.card:hover .image img {
-  transform: scale(1.04);
-}
 
 .imagePlaceholder {
   width: 100%;
@@ -146,7 +139,7 @@
   }
 
   .image {
-    aspect-ratio: 16 / 9;
+    height: 280px;
   }
 
   .content {
