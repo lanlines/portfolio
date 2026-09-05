@@ -47,6 +47,11 @@
   color: var(--fg);
 }
 
+.linkActive {
+  color: var(--fg);
+  font-weight: var(--weight-semibold);
+}
+
 .actions {
   display: flex;
   align-items: center;

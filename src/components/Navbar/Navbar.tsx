@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
 type Theme = 'light' | 'dark';
@@ -9,28 +9,47 @@ interface NavbarProps {
 }
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#home', id: 'home' },
+  { label: 'About', href: '#about', id: 'about' },
+  { label: 'Projects', href: '#projects', id: 'projects' },
+  { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
 export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState('home');
+
+  useEffect(() => {
+    const sections = links.map(l => document.getElementById(l.id)).filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    );
+
+    sections.forEach(s => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
-        <a href="#home" className={styles.logo} onClick={closeMenu}>
-          LJL
-        </a>
+        <a href="#home" className={styles.logo} onClick={closeMenu}>LJL</a>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
-          {links.map(({ label, href }) => (
+          {links.map(({ label, href, id }) => (
             <li key={href}>
-              <a href={href} className={styles.link} onClick={closeMenu}>
+              <a
+                href={href}
+                className={`${styles.link} ${active === id ? styles.linkActive : ''}`}
+                onClick={closeMenu}
+              >
                 {label}
               </a>
             </li>
@@ -52,9 +71,9 @@ export default function Navbar({ theme, onToggleTheme }: NavbarProps) {
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
           >
-            <span className={`${styles.bar} ${menuOpen ? styles.barOpen : ''}`} />
-            <span className={`${styles.bar} ${menuOpen ? styles.barOpen : ''}`} />
-            <span className={`${styles.bar} ${menuOpen ? styles.barOpen : ''}`} />
+            <span className={styles.bar} />
+            <span className={styles.bar} />
+            <span className={styles.bar} />
           </button>
         </div>
       </nav>

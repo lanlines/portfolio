@@ -1,15 +1,16 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import experience from '../../content/experience';
 import styles from './Experience.module.css';
 
 export default function Experience() {
   const work = experience.filter(e => e.type === 'experience');
   const edu = experience.filter(e => e.type === 'education');
+  const ref = useScrollReveal<HTMLDivElement>();
 
   return (
     <section id="experience" className={`${styles.experience} section`}>
       <div className="container">
-        <div className={styles.columns}>
-
+        <div ref={ref} className={`${styles.columns} reveal`}>
           <div className={styles.column}>
             <p className={styles.label}>Experience</p>
             <div className={styles.timeline}>
@@ -48,7 +49,6 @@ export default function Experience() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

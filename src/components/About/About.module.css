@@ -19,13 +19,17 @@
 .photo {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.photoPlaceholder {
+.profilePhoto {
   width: 220px;
   height: 280px;
-  background-color: var(--border);
+  object-fit: cover;
+  object-position: top;
   border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .label {
@@ -57,7 +61,7 @@
   margin-top: var(--space-4);
 }
 
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
   .inner {
     grid-template-columns: 1fr;
     gap: var(--space-8);
@@ -68,7 +72,7 @@
     justify-content: flex-start;
   }
 
-  .photoPlaceholder {
+  .profilePhoto {
     width: 140px;
     height: 180px;
   }

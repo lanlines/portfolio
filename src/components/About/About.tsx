@@ -1,14 +1,19 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './About.module.css';
 
 export default function About() {
+  const ref = useScrollReveal<HTMLDivElement>();
+
   return (
-    <section id="about" className={`${styles.about} section section--alt`}>
+    <section id="about" className={`${styles.about} section`}>
       <div className="container">
-        <div className={styles.inner}>
+        <div ref={ref} className={`${styles.inner} reveal`}>
           <div className={styles.photo}>
-            <div className={styles.photoInner}>
-              <img src="/images/about/profile_picture.jpg" alt="Profile Picture" />
-            </div>
+            <img
+              src="/images/about/profile_picture.jpg"
+              alt="Lance Joseph Lines"
+              className={styles.profilePhoto}
+            />
           </div>
           <div className={styles.content}>
             <p className={styles.label}>About Me</p>
@@ -20,7 +25,7 @@ export default function About() {
             </p>
             <p className={styles.bio}>
               I studied at Cebu Technological University - Main Campus. I'm currently
-              open to new opportunities feel free to reach out.
+              open to new opportunities — feel free to reach out.
             </p>
           </div>
         </div>
