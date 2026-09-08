@@ -92,6 +92,16 @@
   background: linear-gradient(135deg, var(--border) 0%, var(--bg-alt) 100%);
 }
 
+.note {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-style: italic;
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--border);
+  background: var(--bg-alt);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
 .section {
   display: flex;
   flex-direction: column;

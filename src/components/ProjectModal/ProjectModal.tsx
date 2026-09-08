@@ -48,6 +48,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
         )}
 
+        {project.modalNote && (
+          <div className={styles.section}>
+            <p className={styles.note}>{project.modalNote}</p>
+          </div>
+        )}
+
         {project.details && (
           <div className={styles.section}>
             <h3 className={styles.sectionHeading}>Details</h3>

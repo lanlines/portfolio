@@ -58,8 +58,10 @@ const projects: Project[] = [
       '/images/projects/shoppingApp/shopping-session.jpg',
     ],
     modalImages: [
-      // Placeholder images
+      '/images/projects/shoppingApp/dashboard.jpg',
+      '/images/projects/shoppingApp/shopping-session.jpg',
     ],
+    modalNote: 'More screenshots coming soon — app is still in active development.',
     githubUrl: 'https://github.com/lanlines/personal-shopping-app',
     overview: 'An offline-first mobile app designed for personal use that helps you track grocery shopping expenses and compare item prices across different stores. With no accounts, no cloud sync, and no internet required—all data stays on your device.',
     details: 'Shopping Sessions – Start a shopping session at a store with a budget, add items in real-time with a quantity stepper, and track running totals and budget remaining with a visual progress bar.\n\nPrice Comparison – Compare prices for the same item across different stores to find the cheapest option.\n\nTransaction History – Complete archive of past shopping trips with receipt view showing store, date, items, and budget vs. actual spending.\n\nStore Management – Manage your list of stores and update item prices per store.\n\nItem Catalog – Browse all items with price stats (latest, cheapest, average) and store availability.\n\nFavorites – Star items to prioritize them in searches and lists.\n\nArchitecture – Built with a repository pattern for data access with explicit error handling, versioned migrations for schema management, and a feature-first folder structure.',

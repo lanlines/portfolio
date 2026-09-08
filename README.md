@@ -5,7 +5,7 @@ Minimal black-and-white design with light/dark mode support.
 
 ## Live Site
 
-> _Not deployed yet — link will go here_
+> _Not deployed yet._
 
 ---
 
@@ -60,9 +60,13 @@ portfolio/
 │   │   ├── Skills/
 │   │   ├── Projects/
 │   │   ├── Experience/
-│   │   └── Contact/
+│   │   ├── Contact/
+│   │   ├── Carousel/
+│   │   ├── ProjectModal/
+│   │   └── Footer/
 │   │
-│   ├── content/            # Static data (edit this to update content)
+│   ├── hooks/              # Custom React hooks
+│   │   └── useScrollReveal.ts
 │   │   ├── projects.ts
 │   │   ├── skills.ts
 │   │   └── experience.ts
@@ -93,7 +97,7 @@ portfolio/
 | **Hero** | Name, tagline, CTA buttons |
 | **About** | Short bio and photo |
 | **Skills** | Technologies and tools |
-| **Projects** | Featured project cards with screenshots and links |
+| **Projects** | Featured project cards with screenshots, carousel, and modal |
 | **Experience** | Work history and education timeline |
 | **Contact** | Email, GitHub, LinkedIn |
 
@@ -132,9 +136,14 @@ Design tokens are defined in `src/styles/variables.css`.
   title: 'Your Project',
   description: 'What it does and why you built it.',
   tech: ['React', 'TypeScript'],
-  image: '/images/projects/your-project.png',
+  heroImages: ['/images/projects/your-project/hero.png'],   // card carousel
+  modalImages: ['/images/projects/your-project/modal.png'], // modal carousel
+  overview: 'Short project overview.',
+  details: 'Longer description.\n\nSecond paragraph.',
+  highlights: ['What you built or contributed.'],
   liveUrl: 'https://your-project.com',   // optional
   githubUrl: 'https://github.com/...',   // optional
+  modalNote: 'Optional note shown in modal (e.g. screenshots coming soon).', // optional
 }
 ```
 

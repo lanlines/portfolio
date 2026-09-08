@@ -5,6 +5,7 @@ export interface Project {
   image?: string;
   heroImages?: string[];
   modalImages?: string[];
+  modalNote?: string;
   liveUrl?: string;
   githubUrl?: string;
   overview?: string;

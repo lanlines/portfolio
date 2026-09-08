@@ -31,6 +31,11 @@
   background: linear-gradient(135deg, var(--border) 0%, var(--bg-alt) 100%);
 }
 
+.imgError {
+  background: linear-gradient(135deg, var(--border) 0%, var(--bg-alt) 100%);
+  opacity: 0.5;
+}
+
 /* Arrows */
 .arrow {
   position: absolute;

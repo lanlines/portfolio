@@ -33,7 +33,14 @@ export default function Carousel({ images, alt, autoPlayInterval = 3500 }: Carou
     >
       <div className={styles.track} style={{ transform: `translateX(-${current * 100}%)` }}>
         {images.map((src, i) => (
-          <img key={i} src={src} alt={`${alt} ${i + 1}`} className={styles.slide} draggable={false} />
+          <img
+            key={i}
+            src={src}
+            alt={`${alt} ${i + 1}`}
+            className={styles.slide}
+            draggable={false}
+            onError={e => { (e.currentTarget as HTMLImageElement).src = ''; e.currentTarget.classList.add(styles.imgError); }}
+          />
         ))}
       </div>
 
