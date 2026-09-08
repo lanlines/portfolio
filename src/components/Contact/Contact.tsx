@@ -45,6 +45,10 @@ export default function Contact() {
                 </a>
               </li>
             ))}
+            <li className={styles.item}>
+              <span className={styles.linkLabel}>Resume</span>
+              <a href="/resume.pdf" download className={styles.link}>Download PDF ↓</a>
+            </li>
           </ul>
         </div>
       </div>

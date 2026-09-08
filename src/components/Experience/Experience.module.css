@@ -2,6 +2,24 @@
   background: transparent;
 }
 
+.sectionLabel {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.sectionHeading {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-12);
+}
+
 .columns {
   display: grid;
   grid-template-columns: 1fr 1fr;

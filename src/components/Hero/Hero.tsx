@@ -15,6 +15,7 @@ export default function Hero() {
           <div className={styles.cta}>
             <a href="#projects" className={styles.btnPrimary}>View Projects</a>
             <a href="#contact" className={styles.btnSecondary}>Contact Me</a>
+            <a href="/resume.pdf" download className={styles.btnSecondary}>Resume ↓</a>
           </div>
         </div>
       </div>

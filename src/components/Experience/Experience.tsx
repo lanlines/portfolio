@@ -5,12 +5,17 @@ import styles from './Experience.module.css';
 export default function Experience() {
   const work = experience.filter(e => e.type === 'experience');
   const edu = experience.filter(e => e.type === 'education');
+  const headingRef = useScrollReveal<HTMLDivElement>();
   const ref = useScrollReveal<HTMLDivElement>();
 
   return (
     <section id="experience" className={`${styles.experience} section`}>
       <div className="container">
-        <div ref={ref} className={`${styles.columns} reveal`}>
+        <div ref={headingRef} className="reveal">
+          <p className={styles.sectionLabel}>Experience & Education</p>
+          <h2 className={styles.sectionHeading}>Background</h2>
+        </div>
+        <div ref={ref} className={`${styles.columns} reveal reveal-delay-1`}>
           <div className={styles.column}>
             <p className={styles.label}>Experience</p>
             <div className={styles.timeline}>
