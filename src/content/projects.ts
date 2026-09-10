@@ -36,8 +36,6 @@ const projects: Project[] = [
       '/images/projects/jsv/modal/purchase_orders.png',
       '/images/projects/jsv/modal/inventory.png',
       '/images/projects/jsv/modal/inventory_item.png',
-      // '/images/projects/jsv/modal/erd.jpg',
-
     ],
     githubUrl: 'https://github.com/lanlines/jsv-erp',
     overview: 'A client-based ERP system developed to streamline purchasing and inventory management by replacing manual workflows with a centralized digital system. The system improves inventory tracking, item requests, purchasing, and coordination between store attendants, warehouse managers, and administrators.',

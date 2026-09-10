@@ -5,7 +5,7 @@ Minimal black-and-white design with light/dark mode support.
 
 ## Live Site
 
-> _Not deployed yet._
+**https://portfolio-lanlines.vercel.app/**
 
 ---
 

@@ -9,8 +9,8 @@ const links = [
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/lanline512',
-    display: 'github.com/lanline512',
+    href: 'https://github.com/lanlines',
+    display: 'github.com/lanlines',
   },
   {
     label: 'LinkedIn',
