@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Project } from '../../types';
 import Carousel from '../Carousel/Carousel';
 import styles from './ProjectModal.module.css';
@@ -9,13 +9,60 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+
+    const getFocusable = () =>
+      Array.from(
+        modalRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        ) ?? []
+      );
+
+    // Move focus into the dialog on open.
+    (getFocusable()[0] ?? modalRef.current)?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+
+      const focusable = getFocusable();
+      if (focusable.length === 0) {
+        e.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const activeEl = document.activeElement;
+
+      if (e.shiftKey) {
+        // Shift+Tab on the first element wraps to the last.
+        if (activeEl === first || !modalRef.current?.contains(activeEl)) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        // Tab on the last element wraps to the first.
+        if (activeEl === last || !modalRef.current?.contains(activeEl)) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      // Restore focus to whatever opened the modal.
+      previouslyFocused?.focus();
     };
   }, [onClose]);
 
@@ -23,7 +70,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <div className={styles.overlay} onClick={onClose} role="dialog" aria-modal="true">
-      <div className={styles.modal} onClick={e => e.stopPropagation()}>
+      <div className={styles.modal} ref={modalRef} tabIndex={-1} onClick={e => e.stopPropagation()}>
 
         <div className={styles.header}>
           <div>

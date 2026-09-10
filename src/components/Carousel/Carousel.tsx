@@ -19,6 +19,8 @@ export default function Carousel({ images, alt, autoPlayInterval = 3500 }: Carou
 
   useEffect(() => {
     if (paused || images.length <= 1) return;
+    // Respect reduced-motion preference — don't auto-advance.
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
     const id = setInterval(next, autoPlayInterval);
     return () => clearInterval(id);
   }, [paused, next, autoPlayInterval, images.length]);
